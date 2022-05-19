@@ -1,8 +1,10 @@
+import { Navbar } from "./components";
 
 function App() {
+
   return (
     <div className="App">
-        <p className="text-3xl font-bold underline text-red-500">Hello Vite + React!</p>
+      <Navbar />
     </div>
   );
 };
