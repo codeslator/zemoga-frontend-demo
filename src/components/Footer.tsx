@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { FC } from 'react';
 
 interface FooterProps {
 
@@ -6,7 +6,7 @@ interface FooterProps {
 
 const Footer: FC<FooterProps> = () => {
   return (
-    <div>Footer</div>
+    <footer>Footer</footer>
   );
 };
 

@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { FC } from 'react';
 
 interface HeroProps {
 
@@ -6,7 +6,7 @@ interface HeroProps {
 
 const Hero: FC<HeroProps> = ({}) => {
   return (
-    <div>Hero</div>
+    <header>Hero</header>
   );
 };
 

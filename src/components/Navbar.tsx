@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { FC } from 'react';
 
 interface NavbarProps {
 
@@ -6,7 +6,7 @@ interface NavbarProps {
 
 const Navbar: FC<NavbarProps> = () => {
   return (
-    <div>Navbar</div>
+    <nav>Navbar</nav>
   );
 };
 

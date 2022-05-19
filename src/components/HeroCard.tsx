@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { FC } from 'react';
 
 interface HeroCardProps {
 
@@ -6,7 +6,7 @@ interface HeroCardProps {
 
 const HeroCard: FC<HeroCardProps> = () => {
   return (
-    <div>HeroCard</div>
+    <article>HeroCard</article>
   );
 };
 
