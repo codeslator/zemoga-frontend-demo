@@ -15,12 +15,12 @@ interface HeroCardProps {
 
 const HeroCard: FC<HeroCardProps> = ({ hairline, title, description, moreInfoTitle, moreInfoLink, callToAction, thumbs }) => {
   return (
-    <article id="hero-card" className="w-[55%] md:w-[52%] text-left hero-card-background border-none dark:bg-gray-800 dark:border-gray-700 p-3 md:py-8 md:px-6 text-white ml-3 lg:ml-0">
+    <article id="hero-card" className="w-[58%] md:w-[55%] text-left hero-card-background border-none dark:bg-gray-800 dark:border-gray-700 p-3 md:py-8 md:px-6 text-white ml-3 lg:ml-0">
       {Boolean(hairline) && (
         <p className=" text-[12px] md:text-base lg:text-lg xl:text-sm dark:text-gray-400">{hairline}</p>
       )}
-      <h5 className="text-[2.25rem] leading-[1.5rem] lg:text-6xl dark:text-white ">{title}</h5>
-      <p className="mt-4 max-w-[95%] sm:max-w-full lg:max-w-[85%] text-base leading-[16px] md:text-lg md:leading-[18px] lg:text-xl dark:text-gray-400">{description}</p>
+      <h5 className="text-[3rem] leading-[2.5rem] lg:text-5xl dark:text-white ">{title}</h5>
+      <p className="mt-4 max-w-[90%] sm:max-w-full lg:max-w-[90%] text-lg leading-[16px] md:text-lg md:leading-[18px] lg:text-xl lg:leading-[26px] dark:text-gray-400">{description}</p>
       {Boolean(moreInfoTitle) && (
         <a href={moreInfoLink} className="mt-4 hidden md:block">
           <div className="flex align-center">
@@ -37,12 +37,12 @@ const HeroCard: FC<HeroCardProps> = ({ hairline, title, description, moreInfoTit
           <>
             <Button
               type="button"
-              color="bg-main-teal hover:bg-dark-teal"
+              color="hover:bg-main-teal bg-dark-teal"
               icon={ThumbsUp}
             />
             <Button
               type="button"
-              color="bg-main-yellow hover:bg-dark-yellow"
+              color="hover:bg-main-yellow bg-dark-yellow"
               icon={ThumbsDown}
             />
           </>

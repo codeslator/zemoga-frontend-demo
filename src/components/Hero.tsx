@@ -10,7 +10,7 @@ const Hero: FC = ({ }) => {
         className="hero__background max-w-none"
         src={PopePic}
         alt="Pope Francis" />
-      <div className="relative xl:container w-full xl:w-[80%] pt-[68px] lg:pt-0 md:px-8 lg:px-4 xl:px-14 lg:mx-auto lg:mt-[21vh]">
+      <div className="relative xl:container w-full xl:w-[80%] pt-[68px] md:pt-[80px] lg:pt-0 md:px-1 lg:px-4 xl:px-14 2xl:mx-auto lg:mt-[21vh]">
         <HeroCard
           hairline="What's your opinion on"
           title="Pope Francis?"

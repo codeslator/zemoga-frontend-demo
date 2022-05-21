@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { store } from './store';
 import 'flowbite';
-import './index.css';
-import './main.css';
+import './assets/styles/index.css';
+import './assets/styles/main.css';
 import App from './App';
 
 ReactDOM.render(

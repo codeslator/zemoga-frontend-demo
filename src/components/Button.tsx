@@ -12,7 +12,7 @@ const Button: FC<ButtonProps> = ({ type, icon, text, color, onClick }) => {
   return (
     <button
       type={type}
-      className={`w-full h-8 ${color ? color : ''} flex justify-center items-center lg:py-10`}
+      className={`w-full h-10 ${color ? color : ''} flex justify-center items-center lg:py-10`}
       onClick={Boolean(onClick) ? onClick : undefined}
     >
       {Boolean(icon) && (
