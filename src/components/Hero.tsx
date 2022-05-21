@@ -12,7 +12,7 @@ interface HeroProps {
 
 const Hero: FC<HeroProps> = ({ }) => {
   return (
-    <header id="hero" className="relative h-[80vw] min-h-[35rem] max-h-[38rem] overflow-hidden lg:min-h-screen lg:max-h-screen">
+    <header id="hero" className="relative lg:h-[80vw] min-h-[35rem] max-h-[38rem] overflow-hidden lg:max-h-screen">
       <img
         src={PopePic}
         alt="pope"
