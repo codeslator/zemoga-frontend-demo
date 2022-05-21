@@ -41,7 +41,9 @@ const VotationList: FC<VolationList> = ({ title }) => {
         </div>
       </div>
       <div className="votation__list">
-        
+        <article className="votation__item w-full">
+
+        </article>
       </div>
     </section>
   );
