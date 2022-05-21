@@ -640,7 +640,7 @@ main h2 {
     }
 
     .hero {
-        min-height: 700px;
+        min-height: 100vh;
     }
 
     .hero__background {
