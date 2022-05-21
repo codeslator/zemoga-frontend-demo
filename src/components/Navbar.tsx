@@ -9,7 +9,7 @@ const Navbar: FC<NavbarProps> = ({ title }) => {
     <nav id="nav" className="bg-gradient-to-b from-neutral-900 to-transparent border-gray-200 lg:px-4 dark:bg-gray-800 lg:min-h-[22vh] flex items-center fixed z-[2] w-full">
       <div className="relative xl:container w-full xl:w-[80%] pt-4 md:pt-4 lg:pt-0  lg:px-8 xl:px-14 lg:mx-auto flex flex-wrap justify-between items-center">
         <a href="https://flowbite.com" className="flex items-center py-2">
-          <h1 className="self-center text-3xl lg:text-4xl whitespace-nowrap text-white md:pl-2">{title}</h1>
+          <h1 className="self-center text-3xl lg:text-4xl whitespace-nowrap text-white md:pl-2 ml-3">{title}</h1>
         </a>
         <div className="flex items-center lg:order-2 px-2">
           <button data-collapse-toggle="mobile-menu-2" type="button" className="inline-flex items-center text-sm text-gray-500 lg:hidden hover:bg-transparent focus:outline-none dark:text-gray-400 dark:hover:bg-gray-700" aria-controls="mobile-menu-2" aria-expanded="false">
