@@ -6,9 +6,9 @@ function App() {
     <div className="App">
       <Navbar title="Rule of thumb." />
       <Hero />
-      <div className=" bottom-[7rem] sm:bottom-[10rem] md:bottom-[9rem] lg:relative lg:bottom-0 w-full">
+      <div className="relative bottom-[7rem] sm:bottom-[10rem] md:bottom-[9rem] lg:relative lg:bottom-0 w-full">
         <aside></aside>
-        <main className="">Hello world</main>
+        <main className="relative pt-10">Hello world</main>
         <aside></aside>
       </div>
 
