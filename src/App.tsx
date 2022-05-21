@@ -1,4 +1,4 @@
-import { Navbar, Hero, Banner, Footer } from "./components";
+import { Navbar, Hero, Banner, Footer, VotationList } from "./components";
 
 function App() {
 
@@ -15,7 +15,7 @@ function App() {
           onClose={() => console.log('Closing banner')}
         />
         <main>
-          👉 Your code goes here 👈
+          <VotationList title="Previous Rulings" />
         </main>
         <Banner
           type="bottom"
