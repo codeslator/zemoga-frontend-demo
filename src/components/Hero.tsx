@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import PopePic from '../assets/img/pope-francis.@2x.png';
 import HeroCard from './HeroCard';
+import HeroClosing from './HeroClosing';
 
 interface HeroProps {
 
@@ -27,9 +28,9 @@ const Hero: FC<HeroProps> = ({ }) => {
             callToAction="What’s Your Veredict?"
             thumbs
           />
-
         </div>
       </div>
+      <HeroClosing title="CLOSING IN" remainingTime="22days" />
     </header>
   );
 };
