@@ -4,3 +4,4 @@ export { default as HeroCard } from './HeroCard';
 export { default as HeroClosing } from './HeroClosing';
 export { default as Navbar } from './Navbar';
 export { default as Button } from './Button';
+export { default as Banner } from './Banner';

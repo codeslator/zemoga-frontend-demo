@@ -1,4 +1,4 @@
-import { Navbar, Hero } from "./components";
+import { Navbar, Hero, Banner } from "./components";
 
 function App() {
 
@@ -7,39 +7,23 @@ function App() {
       <Navbar title="Rule of thumb." />
       <Hero />
       <div className="max-centered">
-        <aside className="banner banner-top" role="doc-tip" aria-label="Speak Out">
-          <div className="banner__left">
-            <span className="banner__hairline">Speak out. Be heard.</span>
-            <span className="banner__title">Be counted</span>
-          </div>
-          <div className="banner__right">
-            <p className="banner__text">
-              Rule of Thumb is a crowd sourced court of public opinion where anyone and everyone can speak out and speak freely. It’s easy: You share your opinion, we analyze and put the data in a public report.
-            </p>
-          </div>
-          <button className="icon-button" aria-label="close">
-            <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg"><g stroke="#000" stroke-width="2" fill="none" fill-rule="evenodd"><path d="M1 19L19 1M1 1l18 18" /></g></svg>
-          </button>
-        </aside>
-        <main role="main">
+        <Banner
+          type="top"
+          hairline="Speak out. Be heard."
+          title="Be counted"
+          text="Rule of Thumb is a crowd sourced court of public opinion where anyone and everyone can speak out and speak freely. It’s easy: You share your opinion, we analyze and put the data in a public report."
+          onClose={() => console.log('Closing banner')}
+        />
+        <main>
           👉 Your code goes here 👈
         </main>
-        <aside className="banner banner-bottom" role="doc-tip" aria-label="Submit a name">
-          <img
-            srcSet="assets/img/bg-people.png 750w, assets/img/bg-people.@2x.png 1440w"
-            sizes="(min-width: 750px) 1440px, 100vw"
-            className="banner__background" src="assets/img/bg-people.png"
-            alt=""
-            role="none" />
-          <div className="banner__left">
-            <h2 className="banner__heading">Is there anyone else you would want us to add?</h2>
-          </div>
-          <div className="banner__right">
-            <button className="banner__cta">
-              Submit a name
-            </button>
-          </div>
-        </aside>
+        <Banner
+          type="bottom"
+          enableBackgroundImg
+          title="Is there anyone else you would want us to add?"
+          callToActionText="Submit a name"
+          onClick={() => console.log('Submit banner')}
+        />
         <hr role="separator" />
         <footer className="footer">
           <div className="footer__links">
