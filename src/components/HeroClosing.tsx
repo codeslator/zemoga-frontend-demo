@@ -7,7 +7,7 @@ interface HeroClosingProps {
 
 const HeroClosing: FC<HeroClosingProps> = ({ title, remainingTime }) => {
   return (
-    <div className="flex absolute bottom-20 lg:bottom-0 h-10 lg:h-[3.25rem] w-full">
+    <section id="hero-closing" className="flex absolute bottom-20 lg:bottom-0 h-10 lg:h-[3.25rem] w-full">
       <div
         className="relative w-[30%] bg-black-transparent text-white flex 
                     justify-end items-center px-1 after:absolute after:-right-[.75rem]
@@ -20,7 +20,7 @@ const HeroClosing: FC<HeroClosingProps> = ({ title, remainingTime }) => {
       <div className="relative w-[70%] bg-white-transparent text-black flex justify-start items-center px-1 pl-4">
         <span className="text-base lg:text-3xl">{remainingTime}</span>
       </div>
-    </div>
+    </section>
   );
 };
 

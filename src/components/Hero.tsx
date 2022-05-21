@@ -12,12 +12,12 @@ interface HeroProps {
 
 const Hero: FC<HeroProps> = ({ }) => {
   return (
-    <header className="relative h-[80vw] min-h-[35rem] max-h-[38rem] overflow-hidden lg:min-h-screen lg:max-h-screen">
+    <header id="hero" className="relative h-[80vw] min-h-[35rem] max-h-[38rem] overflow-hidden lg:min-h-screen lg:max-h-screen">
       <img
         src={PopePic}
         alt="pope"
         className="absolute object-cover w-[160vw] h-full -top-20 sm:object-center md:w-[110vw] md:object-top lg:h-[106vh] lg:-top-10 lg:object-top mb-3" />
-      <div className="relative xl:container w-full xl:w-[80%] pt-[68px] lg:pt-0 md:px-8 lg:px-4 xl:px-14 lg:mx-auto lg:mt-[21vh]">
+      <section id="hero-content" className="relative xl:container w-full xl:w-[80%] pt-[68px] lg:pt-0 md:px-8 lg:px-4 xl:px-14 lg:mx-auto lg:mt-[21vh]">
         <div className="grid grid-cols-1">
           <HeroCard
             hairline="What's your opinion on"
@@ -29,7 +29,7 @@ const Hero: FC<HeroProps> = ({ }) => {
             thumbs
           />
         </div>
-      </div>
+      </section>
       <HeroClosing title="CLOSING IN" remainingTime="22days" />
     </header>
   );

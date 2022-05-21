@@ -15,7 +15,7 @@ interface HeroCardProps {
 
 const HeroCard: FC<HeroCardProps> = ({ hairline, title, description, moreInfoTitle, moreInfoLink, callToAction, thumbs }) => {
   return (
-    <article className="w-[55%] md:w-[52%] text-left hero-card-background border-none dark:bg-gray-800 dark:border-gray-700 p-3 md:py-8 md:px-6 text-white ml-3 lg:ml-0">
+    <article id="hero-card" className="w-[55%] md:w-[52%] text-left hero-card-background border-none dark:bg-gray-800 dark:border-gray-700 p-3 md:py-8 md:px-6 text-white ml-3 lg:ml-0">
       {Boolean(hairline) && (
         <p className=" text-[12px] md:text-base lg:text-lg xl:text-sm dark:text-gray-400">{hairline}</p>
       )}
