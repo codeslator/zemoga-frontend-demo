@@ -21,7 +21,7 @@ const Hero: FC = ({ }) => {
           thumbs
         />
       </div>
-      <HeroClosing title="" remainingTime="" />
+      <HeroClosing title="CLOSING IN" remainingTime="22 days" />
     </header>
   );
 };
