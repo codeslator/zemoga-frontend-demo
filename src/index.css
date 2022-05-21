@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.hero-card-background {
+  background: center no-repeat linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), calc(-50vw + 650px) -6rem/105vw auto no-repeat url(../assets/img/pope-francis.png)
+}

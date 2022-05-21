@@ -6,6 +6,7 @@ function App() {
     <div className="App">
       <Navbar title="Rule of thumb." />
       <Hero />
+      <h1>Hello world</h1>
     </div>
   );
 };

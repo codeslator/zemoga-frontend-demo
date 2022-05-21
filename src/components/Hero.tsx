@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import PopePic from '../assets/img/pope-francis.@2x.png';
+import HeroCard from './HeroCard';
 
 interface HeroProps {
 
@@ -15,6 +16,20 @@ const Hero: FC<HeroProps> = ({}) => {
         src={PopePic}
         alt="pope"
         className="absolute object-cover w-[160vw] h-full -top-20 sm:object-center md:w-[110vw] md:object-top lg:h-[106vh] lg:-top-10 lg:object-top mb-3" />
+        <div className="relative xl:container w-full xl:w-[80%] pt-[68px] lg:pt-0 lg:px-8 xl:px-14 lg:mx-auto lg:mt-[21vh]">
+          <HeroCard
+            hairline="What's your opinion on"
+            title="Pope Francis?"
+            description="He’s talking tough on clergy sexual abuse, or is he just another pervert protector? (thumbs down) or a true pedophile punishing pontiff? (thumbs up)"
+            moreInfoLink="http://wikipedia.com"
+            moreInfoTitle="More Information"
+            callToAction="What’s Your Veredict?"
+          />
+          <div>
+
+          </div>
+
+        </div>
     </header>
   );
 };
