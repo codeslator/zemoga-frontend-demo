@@ -2,7 +2,7 @@ import { FC } from 'react';
 import ThumbsUp from '../assets/img/thumbs-up.svg';
 import ThumbsDown from '../assets/img/thumbs-down.svg';
 import { Button } from './';
-import { CandidateData } from './interfaces';
+import { CandidateData } from '../global/interfaces';
 
 interface VotationItem {
   type: 'list' | 'grid';
