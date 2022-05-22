@@ -1,7 +1,13 @@
 import { Action, configureStore, ThunkAction } from '@reduxjs/toolkit';
+import uiReducer from './ui';
+import websiteReducer from './website';
+
 
 export const store = configureStore({
-  reducer: {},
+  reducer: {
+    ui: uiReducer,
+    website: websiteReducer,
+  },
 });
 
 export type RootState = ReturnType<typeof store.getState>
