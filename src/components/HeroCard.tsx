@@ -39,11 +39,17 @@ const HeroCard: FC<HeroCardProps> = ({ hairline, title, description, moreInfoTit
               type="button"
               color="hover:bg-main-teal bg-dark-teal"
               icon={ThumbsUp}
+              fullWidth
+              classes="lg:py-10"
+              iconClasses="lg:w-8 lg:h-8"
             />
             <Button
               type="button"
               color="hover:bg-main-yellow bg-dark-yellow"
               icon={ThumbsDown}
+              fullWidth
+              classes="lg:py-10"
+              iconClasses="lg:w-8 lg:h-8"
             />
           </>
         ) : (
@@ -51,6 +57,8 @@ const HeroCard: FC<HeroCardProps> = ({ hairline, title, description, moreInfoTit
               type="button"
               color="bg-gray-600"
               text="Click here"
+              fullWidth
+              classes="lg:py-10"
             />
         )}
       </div>

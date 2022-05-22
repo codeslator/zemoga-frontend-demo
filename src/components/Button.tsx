@@ -6,19 +6,22 @@ interface ButtonProps {
   text?: string;
   color?: string;
   onClick?: () => void | MouseEventHandler;
+  fullWidth?: boolean;
+  classes?: string;
+  iconClasses?: string;
 }
 
-const Button: FC<ButtonProps> = ({ type, icon, text, color, onClick }) => {
+const Button: FC<ButtonProps> = ({ type, icon, text, color, onClick, fullWidth, classes, iconClasses }) => {
   return (
     <button
       type={type}
-      className={`w-full h-10 ${color ? color : ''} flex justify-center items-center lg:py-10`}
+      className={`${fullWidth && 'w-full'} min-h-10 ${color && color} flex justify-center items-center ${classes && classes}`}
       onClick={Boolean(onClick) ? onClick : undefined}
     >
       {Boolean(icon) && (
-        <img src={icon} alt={text} className="lg:w-8 lg:h-8" />
+        <img src={icon} alt={text} className={iconClasses} />
       )}
-      <span className={text ? 'block' : 'hidden'}>{text}</span>
+      <span className={`${text ? 'block' : 'hidden'} flex`}>{text}</span>
     </button>
   );
 };
