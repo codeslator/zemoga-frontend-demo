@@ -21,7 +21,7 @@ const Button: FC<ButtonProps> = ({ type, icon, text, color, onClick, fullWidth, 
       {Boolean(icon) && (
         <img src={icon} alt={text} className={iconClasses} />
       )}
-      <span className={`${text ? 'block' : 'hidden'} flex`}>{text}</span>
+      <span className={`${text ? 'block' : 'hidden'} flex text-xl sm:text-md lg:text-lg`}>{text}</span>
     </button>
   );
 };
