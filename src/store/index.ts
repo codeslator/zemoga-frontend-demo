@@ -1,10 +1,14 @@
 import { Action, configureStore, ThunkAction } from '@reduxjs/toolkit';
+import authReducer from './auth';
+import votationsReducer from './votations';
 import uiReducer from './ui';
 import websiteReducer from './website';
 
 
 export const store = configureStore({
   reducer: {
+    auth: authReducer,
+    votations: votationsReducer,
     ui: uiReducer,
     website: websiteReducer,
   },

@@ -26,3 +26,10 @@ export interface CandidateData {
   category: string;
   votes: Votes;
 }
+
+export interface AuthenticatedUser {
+  firstName: string;
+  lastName: string;
+  email: string;
+  password: string | undefined;
+}
