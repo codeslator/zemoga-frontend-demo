@@ -29,8 +29,8 @@ const VotationList: FC<VolationList> = ({ title }) => {
           {(layoutType === 'list') ? 'List' : 'Grid'}
           <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
         </button>
-        <div id="dropdown" className="w-48 z-10 hidden bg-white divide-y divide-gray-100 shadow dark:bg-gray-700">
-          <ul className="py-1 text-sm  dark:text-gray-700" aria-labelledby="dropdownDefault">
+        <div id="dropdown" className="w-48 z-10 hidden bg-white shadow dark:bg-gray-700">
+          <ul className="text-sm border-2 border-black dark:text-gray-700" aria-labelledby="dropdownDefault">
             {options.map(({ label, value }) => (
               <li onClick={() => handleLayoutType(value)}>
                 <span className={`block px-4 py-2 hover:bg-gray-100 text-black visited:text-black ${value === layoutType && 'bg-gray-400 hover:bg-gray-600'}`}>{label}</span>

@@ -6,7 +6,7 @@ import { CandidateData } from '../global/interfaces';
 import { useVotations } from '../hooks';
 
 interface VotationItem {
-  type: 'list' | 'grid';
+  type: string;
   candidate: CandidateData;
 }
 
@@ -45,7 +45,7 @@ const VotationItem: FC<VotationItem> = ({ type, candidate }) => {
                 <>
                   <Button
                     type="button"
-                    color="hover:bg-main-teal bg-dark-teal"
+                    color="hover:bg-main-teal bg-dark-teal focus:"
                     icon={ThumbsUp}
                     classes="w-16 h-16 md:w-10 md:h-10 mr-5 md:mr-2"
                     iconClasses="w-8 h-8 md:w-5 md:h-5"
