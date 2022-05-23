@@ -1,17 +1,18 @@
 import { Navbar, Hero, Banner, Footer, VotationList } from "./components";
+import { useWebsite } from "./hooks";
 
 function App() {
-
+  const { title, bannerTop, bannerBottom } = useWebsite();
   return (
     <div className="App">
-      <Navbar title="Rule of thumb." />
+      <Navbar title={title} />
       <Hero />
       <div className="max-centered">
         <Banner
           type="top"
-          hairline="Speak out. Be heard."
-          title="Be counted"
-          text="Rule of Thumb is a crowd sourced court of public opinion where anyone and everyone can speak out and speak freely. It’s easy: You share your opinion, we analyze and put the data in a public report."
+          hairline={bannerTop.hairline}
+          title={bannerTop.title}
+          text={bannerTop.text}
           onClose={() => console.log('Closing banner')}
         />
         <main>
@@ -20,8 +21,8 @@ function App() {
         <Banner
           type="bottom"
           enableBackgroundImg
-          title="Is there anyone else you would want us to add?"
-          callToActionText="Submit a name"
+          title={bannerBottom.title}
+          callToActionText={bannerBottom.callToAction}
           onClick={() => console.log('Submit banner')}
         />
         <hr role="separator" />
