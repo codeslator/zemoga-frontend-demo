@@ -1,5 +1,5 @@
 export interface UIState {
-  layoutType: 'grid' | 'list';
+  layoutType: string;
 }
 
 export const uiState: UIState = {

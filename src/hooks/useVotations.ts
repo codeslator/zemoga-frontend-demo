@@ -6,8 +6,9 @@ const useVotations = () => {
   const dispatch = useAppDispatch();
 
   
+  
   return {
-
+    candidates,
   };
 };
 

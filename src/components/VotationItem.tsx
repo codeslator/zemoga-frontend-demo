@@ -13,9 +13,9 @@ const VotationItem: FC<VotationItem> = ({ type, candidate }) => {
   const { name, picture, description, lastUpdated, hasVoted, votes } = candidate;
 
   return (
-    <article className={`votation__item mb-2 h-[400px] ${type === 'list' && 'md:h-[180px]'} relative`}>
+    <article className={`votation__item mb-4 h-[400px] ${type === 'list' ? 'md:h-[200px]' : 'mr-4'} relative`}>
       <div className="votation__container w-full h-full flex justify-between">
-        <div className={`votation__picture w-full ${type === 'list' && 'md:w-[30%]'} shrink-0 `}>
+        <div className={`votation__picture w-full ${type === 'list' && 'md:w-[25%]'} shrink-0 `}>
           <div className={`votation_winning bg-dark-teal w-16 h-16 flex justify-center items-center absolute top-[25%] sm:top-[30%] ${type === 'list' && 'md:w-12 md:h-12 md:top-0'}`}>
             <img src={ThumbsUp} alt="votation_winning" className="w-8 h-8 md:w-6 md:h-6" />
           </div>
