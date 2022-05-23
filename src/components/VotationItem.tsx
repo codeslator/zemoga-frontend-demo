@@ -3,6 +3,7 @@ import ThumbsUp from '../assets/img/thumbs-up.svg';
 import ThumbsDown from '../assets/img/thumbs-down.svg';
 import { Button, VotationBar } from './';
 import { CandidateData } from '../global/interfaces';
+import { useVotations } from '../hooks';
 
 interface VotationItem {
   type: 'list' | 'grid';
@@ -10,7 +11,9 @@ interface VotationItem {
 }
 
 const VotationItem: FC<VotationItem> = ({ type, candidate }) => {
-  const { name, picture, description, lastUpdated, hasVoted, votes } = candidate;
+  const { handleNegativeVote, handlePositiveVote, handleVoteAgain, handleVoteFinish } = useVotations();
+  const { id, name, picture, description, lastUpdated, hasVoted, votes } = candidate;
+
 
   return (
     <article className={`votation__item mb-4 h-[400px] ${type === 'list' ? 'md:h-[200px]' : 'mr-4'} relative`}>
@@ -46,6 +49,7 @@ const VotationItem: FC<VotationItem> = ({ type, candidate }) => {
                     icon={ThumbsUp}
                     classes="w-16 h-16 md:w-10 md:h-10 mr-5 md:mr-2"
                     iconClasses="w-8 h-8 md:w-5 md:h-5"
+                    onClick={() => handlePositiveVote(id)}
                   />
                   <Button
                     type="button"
@@ -53,6 +57,7 @@ const VotationItem: FC<VotationItem> = ({ type, candidate }) => {
                     icon={ThumbsDown}
                     classes="w-16 h-16 md:w-10 md:h-10 mr-5 md:mr-2"
                     iconClasses="w-8 h-8 md:w-5 md:h-5"
+                    onClick={() => handleNegativeVote(id)}
                   />
                 </>
               )}
@@ -61,6 +66,7 @@ const VotationItem: FC<VotationItem> = ({ type, candidate }) => {
                 color="bg-black-transparent-dark border-2 border-white text-white"
                 text={hasVoted ? 'Vote Again' : 'Vote Now'}
                 classes="h-20 w-48 md:h-10 md:w-auto px-5 md:px-2 lg:px-5"
+                onClick={() => hasVoted ? handleVoteAgain(id) : handleVoteFinish(id)}
               // iconClasses="w-5 h-5"
               />
             </div>

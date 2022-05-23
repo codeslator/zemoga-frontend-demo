@@ -18,6 +18,7 @@ export interface Votes {
 }
 
 export interface CandidateData {
+  id: string;
   picture?: string;
   name: string;
   description: string;

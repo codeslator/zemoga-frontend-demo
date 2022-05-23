@@ -9,7 +9,9 @@ export const votationsSlice = createSlice({
 });
 
 export const {
-  incrementVotes: INCREMENT_VOTES,
-  decrementVotes: DECREMENT_VOTES,
+  incrementPositiveVotes: INCREMENT_POSITIVE_VOTES,
+  incrementNegativeVotes: INCREMENT_NEGATIVE_VOTES,
+  voteAgain: VOTE_AGAIN,
+  voteFinish: VOTE_FINISH,
 } = votationsSlice.actions;
 export default votationsSlice.reducer; 
