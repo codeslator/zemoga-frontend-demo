@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.hero-card-background {
+  background: center no-repeat linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4))
+}
+
+.votation-card-gradient {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(to left, rgba(97,97,97,1) 0%, rgba(97,97,97,1) 95%, rgba(0,0,0,0) 100%);
+}
+
+.votation-card-gradient-dark {
+  background: rgb(0, 0, 0);
+  background: center no-repeat linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}
+
+@media (max-width: 768px) {
+  .votation-card-gradient {
+    background: rgb(0, 0, 0);
+    background: center no-repeat linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  }
+}
