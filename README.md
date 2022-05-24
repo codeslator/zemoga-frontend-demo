@@ -2,7 +2,7 @@
 
 Technical Test by Zemoga - @codeslator (Andres Melendez)
 
-### NOTE: I wanted to make it bigger including maybe a litle basic authentication but today (24/05/2022) is the deadline, so I hope at least to have comply with the initial requirements.
+### NOTE: I wanted to make it bigger including maybe a litle basic authentication or a better SEO but today (24/05/2022) is the deadline, so I hope at least to have comply with the initial requirements.
 
 ### NOTE: Sadly I had problems configuring the test environment with Jest + Enzyme + TypeScript and PostCSS, an error appears when run the tests and jest transform css modules;
 ## Installation
