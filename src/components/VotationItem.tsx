@@ -4,7 +4,7 @@ import ThumbsUp from '../assets/img/thumbs-up.svg';
 import ThumbsDown from '../assets/img/thumbs-down.svg';
 import { Button, VotationBar } from './';
 import { CandidateData } from '../global/interfaces';
-import { useVotations } from '../hooks';
+import { useVotations, useWindowResize } from '../hooks';
 import { parseISO } from 'date-fns';
 
 interface VotationItem {
@@ -14,6 +14,7 @@ interface VotationItem {
 
 const VotationItem: FC<VotationItem> = ({ type, candidate }) => {
   const { handleNegativeVote, handlePositiveVote, handleVoteAgain, handleVoteFinish } = useVotations();
+  const [width] = useWindowResize();
   const { id, name, picture, description, lastUpdated, hasVoted, votes } = candidate;
 
   return (
@@ -30,12 +31,12 @@ const VotationItem: FC<VotationItem> = ({ type, candidate }) => {
           />
         </div>
         <div
-          className={`votation__info w-full md:w-[80%] h-full px-4 py-3 
+          className={`votation__info w-full h-full px-4 py-3 
                 flex flex-col justify-center  items-center absolute right-0 
-                ${type === 'list' && 'votation-card-gradient'} text-white 
+                ${type === 'list' ? 'md:w-[80%] votation-card-gradient' : 'md:w-full votation-card-gradient-dark'} text-white 
                 ${type === 'list' && 'md:flex-row md:justify-between md:items-start'}`}
         >
-          <div className={`votation__data w-[75%] ${type === 'list' ? 'md:w-[70%]' : 'md:w-full'}`}>
+          <div className={`votation__data w-[75%] ${type === 'list' ? 'md:w-[70%]' : 'md:w-[70%]'}`}>
             <h6 className="votation__name text-5xl md:text-3xl pb-2">{name}</h6>
             <p className="votation__description text-[16px] md:text-md">{description}</p>
           </div>
