@@ -1,5 +1,7 @@
 import { FC } from 'react';
-import { useUI, useVotations } from '../hooks';
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import { useUI, useVotations, useWindowResize } from '../hooks';
 import VotationItem from './VotationItem';
 
 interface VolationList {
@@ -20,6 +22,7 @@ const options = [
 const VotationList: FC<VolationList> = ({ title }) => {
   const { layoutType, handleLayoutType } = useUI();
   const { candidates } = useVotations();
+  const [width] = useWindowResize();
 
   return (
     <section className="w-full mt-2">
@@ -39,10 +42,26 @@ const VotationList: FC<VolationList> = ({ title }) => {
           </ul>
         </div>
       </div>
-      <div className={`votation__list my-4 px-4 md:px-0 grid ${layoutType === 'list' ? 'grid-cols-1' : 'grid-cols-2'}`}>
-        {candidates.map((candidate, i) => (
-          <VotationItem candidate={candidate} type={layoutType} key={i} />
-        ))}
+      <div className={`votation__list my-4 px-4 md:px-0 `}>
+        {layoutType === 'grid' || (width < 768) ? (
+          <Swiper
+            className="mySwiper"
+            spaceBetween={50}
+            slidesPerView={width < 768 ? 1 : 2}
+            >
+            {candidates.map((candidate, i) => (
+              <SwiperSlide key={i}>
+                <VotationItem candidate={candidate} type={layoutType} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        ) : (
+          <>
+            {candidates.map((candidate, i) => (
+              <VotationItem candidate={candidate} type={layoutType} key={i} />
+            ))}
+          </>
+        )}
       </div>
     </section>
   );

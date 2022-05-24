@@ -9,3 +9,4 @@ export { default as useAuth } from './useAuth';
 export { default as useUI } from './useUI';
 export { default as useVotations } from './useVotations';
 export { default as useWebsite } from './useWebsite';
+export { default as useWindowResize } from './useWindowResize';

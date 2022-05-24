@@ -32,7 +32,7 @@ const VotationItem: FC<VotationItem> = ({ type, candidate }) => {
         <div
           className={`votation__info w-full md:w-[80%] h-full px-4 py-3 
                 flex flex-col justify-center  items-center absolute right-0 
-                votation-card-gradient text-white 
+                ${type === 'list' && 'votation-card-gradient'} text-white 
                 ${type === 'list' && 'md:flex-row md:justify-between md:items-start'}`}
         >
           <div className={`votation__data w-[75%] ${type === 'list' ? 'md:w-[70%]' : 'md:w-full'}`}>
