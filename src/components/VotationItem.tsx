@@ -14,7 +14,6 @@ const VotationItem: FC<VotationItem> = ({ type, candidate }) => {
   const { handleNegativeVote, handlePositiveVote, handleVoteAgain, handleVoteFinish } = useVotations();
   const { id, name, picture, description, lastUpdated, hasVoted, votes } = candidate;
 
-
   return (
     <article className={`votation__item mb-4 h-[400px] ${type === 'list' ? 'md:h-[200px]' : 'mr-4'} relative`}>
       <div className="votation__container w-full h-full flex justify-between">
@@ -31,7 +30,7 @@ const VotationItem: FC<VotationItem> = ({ type, candidate }) => {
         <div
           className={`votation__info w-full md:w-[80%] h-full px-4 py-3 
                 flex flex-col justify-center  items-center absolute right-0 
-                md:bg-gradient-to-l md:from-[#616161] md:via-[#616161] text-white 
+                votation-card-gradient text-white 
                 ${type === 'list' && 'md:flex-row md:justify-between md:items-start'}`}
         >
           <div className={`votation__data w-[75%] ${type === 'list' ? 'md:w-[70%]' : 'md:w-full'}`}>
@@ -39,13 +38,13 @@ const VotationItem: FC<VotationItem> = ({ type, candidate }) => {
             <p className="votation__description text-[16px] md:text-md">{description}</p>
           </div>
           <div className={`votation__actions w-[90%] mt-3 ${type === 'list' ? 'md:w-[30%] md:mt-0' : 'md:w-full'}`}>
-            <div className="votation__date text-[14px] text-right font-bold">{hasVoted ? '' : `1 month ago in Entertainment`}</div>
+            <div className="votation__date text-[14px] text-right font-bold">{hasVoted ? 'Thank you for your vote!' : `1 month ago in Entertainment`}</div>
             <div className="votation_buttons mt-3 flex justify-end items-center">
               {!hasVoted && (
                 <>
                   <Button
                     type="button"
-                    color="hover:bg-main-teal bg-dark-teal focus:"
+                    color="hover:bg-main-teal bg-dark-teal focus:border-2 focus:border-white"
                     icon={ThumbsUp}
                     classes="w-16 h-16 md:w-10 md:h-10 mr-5 md:mr-2"
                     iconClasses="w-8 h-8 md:w-5 md:h-5"
@@ -53,7 +52,7 @@ const VotationItem: FC<VotationItem> = ({ type, candidate }) => {
                   />
                   <Button
                     type="button"
-                    color="hover:bg-main-yellow bg-dark-yellow"
+                    color="hover:bg-main-yellow bg-dark-yellow focus:border-2 focus:border-white"
                     icon={ThumbsDown}
                     classes="w-16 h-16 md:w-10 md:h-10 mr-5 md:mr-2"
                     iconClasses="w-8 h-8 md:w-5 md:h-5"

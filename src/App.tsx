@@ -3,6 +3,7 @@ import { useWebsite } from "./hooks";
 
 function App() {
   const { title, bannerTop, bannerBottom } = useWebsite();
+  
   return (
     <div className="App">
       <Navbar title={title} />

@@ -10,12 +10,5 @@
 
 .votation-card-gradient {
   background: rgb(0, 0, 0);
-  background: linear-gradient(
-    270deg,
-    rgba(0, 0, 0, 0.603536482952556) 0%,
-    rgba(0, 0, 0, 0.695973457742472) 30%,
-    rgba(0, 0, 0, 0.7968137938769257) 60%,
-    rgba(0, 0, 0, 0.603536482952556) 90%,
-    rgba(0, 0, 0, 0) 100%
-  );
+  background: linear-gradient(to left, rgba(97,97,97,1) 0%, rgba(97,97,97,1) 95%, rgba(0,0,0,0) 100%);
 }
