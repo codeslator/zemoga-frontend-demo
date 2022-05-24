@@ -25,7 +25,7 @@ const VotationList: FC<VolationList> = ({ title }) => {
   const [width] = useWindowResize();
 
   return (
-    <section className="w-full mt-2">
+    <section className="w-full mt-2 sm:px-4 md:px-0">
       <div className="votation__list__header flex justify-between items-center px-4 lg:px-0">
         <h4 className="text-2xl">{title}</h4>
         <button id="dropdownDefault" data-dropdown-toggle="dropdown" className="hidden w-48 text-black bg-white hover:bg-gray-300 border-2 border-black focus:ring-2 focus:outline-none focus:ring-black font-medium text-sm px-4 py-2 md:flex justify-center items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
