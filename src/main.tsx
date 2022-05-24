@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import TimeAgo from 'javascript-time-ago'
+// @ts-ignore
 import en from 'javascript-time-ago/locale/en.json';
 import { store } from './store';
 import 'flowbite';

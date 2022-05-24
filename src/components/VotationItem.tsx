@@ -4,7 +4,7 @@ import ThumbsUp from '../assets/img/thumbs-up.svg';
 import ThumbsDown from '../assets/img/thumbs-down.svg';
 import { Button, VotationBar } from './';
 import { CandidateData } from '../global/interfaces';
-import { useVotations, useWindowResize } from '../hooks';
+import { useVotations } from '../hooks';
 import { parseISO } from 'date-fns';
 
 interface VotationItem {
@@ -14,7 +14,6 @@ interface VotationItem {
 
 const VotationItem: FC<VotationItem> = ({ type, candidate }) => {
   const { handleNegativeVote, handlePositiveVote, handleVoteAgain, handleVoteFinish } = useVotations();
-  const [width] = useWindowResize();
   const { id, name, picture, description, lastUpdated, hasVoted, votes } = candidate;
 
   return (
