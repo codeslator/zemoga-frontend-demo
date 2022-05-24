@@ -1,9 +1,11 @@
 import { FC } from 'react';
+import ReactTimeAgo from 'react-time-ago'
 import ThumbsUp from '../assets/img/thumbs-up.svg';
 import ThumbsDown from '../assets/img/thumbs-down.svg';
 import { Button, VotationBar } from './';
 import { CandidateData } from '../global/interfaces';
 import { useVotations } from '../hooks';
+import { parseISO } from 'date-fns';
 
 interface VotationItem {
   type: string;
@@ -18,7 +20,7 @@ const VotationItem: FC<VotationItem> = ({ type, candidate }) => {
     <article className={`votation__item mb-4 h-[400px] ${type === 'list' ? 'md:h-[200px]' : 'mr-4'} relative`}>
       <div className="votation__container w-full h-full flex justify-between">
         <div className={`votation__picture w-full ${type === 'list' && 'md:w-[25%]'} shrink-0 `}>
-          <div className={`votation_winning bg-dark-teal w-16 h-16 flex justify-center items-center absolute top-[25%] sm:top-[30%] ${type === 'list' && 'md:w-12 md:h-12 md:top-0'}`}>
+          <div className={`votation_winning bg-dark-teal w-16 h-16 flex justify-center items-center absolute top-[25%] sm:top-[30%] ${type === 'list' && 'md:w-12 md:h-12 md:top-0'} z-10`}>
             <img src={ThumbsUp} alt="votation_winning" className="w-8 h-8 md:w-6 md:h-6" />
           </div>
           <img
@@ -38,7 +40,7 @@ const VotationItem: FC<VotationItem> = ({ type, candidate }) => {
             <p className="votation__description text-[16px] md:text-md">{description}</p>
           </div>
           <div className={`votation__actions w-[90%] mt-3 ${type === 'list' ? 'md:w-[30%] md:mt-0' : 'md:w-full'}`}>
-            <div className="votation__date text-[14px] text-right font-bold">{hasVoted ? 'Thank you for your vote!' : `1 month ago in Entertainment`}</div>
+            <div className="votation__date text-[14px] text-right font-bold">{hasVoted ? 'Thank you for your vote!' : <ReactTimeAgo date={parseISO(lastUpdated)} locale="en-US"/>}</div>
             <div className="votation_buttons mt-3 flex justify-end items-center">
               {!hasVoted && (
                 <>
